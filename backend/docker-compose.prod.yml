@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  survey_api:
+    build: .
+    ports:
+      - 8000
+    volumes:
+      - @BASE_PATH@mag/mag-engine/apps/@APP_NAME@/bricks/@BRICK_NAME@:/home/node/brickdev # absolute path
+    depends_on:
+      - survey_mongo
+    environment: 
+      - NODE_ENV=production
+      - APP_NAME=@APP_NAME_ENV@
+
+  survey_mongo:
+    image: mongo:3.0-wheezy
+    ports:
+      - 27017
+    volumes:
+      - @BASE_PATH@mag/mag-engine/apps/@APP_NAME@/bricks/@BRICK_NAME@/database-prod:/data/db # absolute path
+
+      #/home/jlink/Documents/mag/mag-engine/apps
