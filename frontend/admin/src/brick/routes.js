@@ -2,7 +2,7 @@ import Start from './components/Start'
 
 export default {
   routes: [{
-    path: '/survey',
+    path: '/survey/start',
     component: Start,
   }]
 }
