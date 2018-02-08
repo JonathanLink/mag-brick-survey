@@ -9,7 +9,7 @@ import Checkbox from 'sq-web-components-core-react/forms/Checkbox'
 import List, { ListItem } from "sq-web-components-core-react/collections/List"
 import Badge from "sq-web-components-core-react/elements/Badge"
 import {IconMoreHorizontal} from "sq-web-icons"
-import { say }  from "cowsay"
+//import { say }  from "cowsay"
 
 import '../assets/styles.css'
 
@@ -17,7 +17,7 @@ class Start extends Component {
     
     constructor() {
         super()
-        console.log( say( {text: "survey admin"}) )
+  //      console.log( say( {text: "survey admin"}) )
 
     }
 
